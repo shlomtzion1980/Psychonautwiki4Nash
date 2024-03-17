@@ -1,0 +1,89 @@
+/* General Table Styles */
+
+.main {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #b8bdaf;
+  color: rgb(0, 0, 0);
+  form {
+    input {
+      width: 50%;
+    }
+    .inputs {
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      min-height: 15vh;
+    }
+  }
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+td,
+th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* Alternating Row Colors */
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Hover Effect */
+tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+  table {
+    border: 0; /* Remove borders for small screens */
+  }
+
+  td,
+  th {
+    border: 1px solid #ddd;
+    display: block;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  /* Add padding to cells for better spacing */
+  td,
+  th {
+    padding: 12px;
+    margin: 0;
+  }
+
+  /* Hide table headers */
+  thead {
+    display: none;
+  }
+
+  /* Display "mobile-first" labels */
+  tbody td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: inline-block;
+    width: 70px; /* Adjust based on your content */
+  }
+}
